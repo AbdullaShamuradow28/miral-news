@@ -8,7 +8,6 @@ import 'package:miral_news/app_theme.dart'; // Импортируем новый
 import 'package:miral_news/theme_changer.dart'; // Импортируем ThemeChanger
 import 'package:miral_news/features/home_page/bloc/news_bloc.dart'; // Ваш Bloc
 import 'package:miral_news/features/home_page/view/homepage.dart';
-import 'package:window_manager/window_manager.dart'; // Ваш домашний экран
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
