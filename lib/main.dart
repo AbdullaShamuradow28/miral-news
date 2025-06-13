@@ -12,29 +12,6 @@ import 'package:window_manager/window_manager.dart'; // Ваш домашний 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await windowManager.ensureInitialized();
-
-  // Define your window options
-  WindowOptions windowOptions = WindowOptions(
-    size: Size(390, 882), // Initial window size (width, height)
-    center: true, // Center the window on the screen
-    minimumSize: Size(390, 882), // Optional: Set a minimum size
-    maximumSize: Size(390, 882), // O // Allow the user to resize the window
-    title: "My Awesome Flutter App", // Set the window title
-    // Other options:
-    backgroundColor:
-        Colors.transparent, // Background color when window is transparent
-    skipTaskbar: false, // Whether the window should be skipped from the taskbar
-    titleBarStyle:
-        TitleBarStyle
-            .normal, // Or TitleBarStyle.hidden, TitleBarStyle.hiddenOnMac
-  );
-
-  // Wait until the window is ready to show, then apply options
-  windowManager.waitUntilReadyToShow(windowOptions, () async {
-    await windowManager.show();
-    await windowManager.focus();
-  });
   runApp(
     // Оборачиваем все приложение в ChangeNotifierProvider,
     // чтобы ThemeChanger был доступен всем виджетам.
